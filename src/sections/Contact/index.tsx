@@ -1,17 +1,27 @@
 import React, { FC } from 'react';
-import { Section as DotsSections, ColumnLayout, ColumnItem, StackLayout, StackItem, Text, Link, Icon } from 'dots';
+import {
+  Section as DotsSections,
+  ColumnLayout,
+  ColumnItem,
+  StackLayout,
+  StackItem,
+  Text,
+  Link,
+  Icon,
+  Title,
+} from 'dots';
 
 import { NAME } from './constants';
 
 const Component: FC = () => (
-  <DotsSections attribute={{ id: NAME }}>
+  <DotsSections attribute={{ id: NAME }} className="is-contact">
     <ColumnLayout gap={4}>
       <ColumnItem>
         <StackLayout gap={4}>
           <StackItem>
-            <ColumnLayout gap={2}>
+            <ColumnLayout gap={2} align="center">
               <ColumnItem size="auto">
-                <Icon name="home" />
+                <Icon name="home" color="primary" />
               </ColumnItem>
               <ColumnItem>
                 <Text text="Berlin, Germany" />
@@ -19,9 +29,9 @@ const Component: FC = () => (
             </ColumnLayout>
           </StackItem>
           <StackItem>
-            <ColumnLayout gap={2}>
+            <ColumnLayout gap={2} align="center">
               <ColumnItem size="auto">
-                <Icon name="email" />
+                <Icon name="email" color="primary" />
               </ColumnItem>
               <ColumnItem>
                 <Text text="pedro.work.92@gmail.com" />
@@ -29,9 +39,9 @@ const Component: FC = () => (
             </ColumnLayout>
           </StackItem>
           <StackItem>
-            <ColumnLayout gap={2}>
+            <ColumnLayout gap={2} align="center">
               <ColumnItem size="auto">
-                <Icon name="phone" />
+                <Icon name="phone" color="primary" />
               </ColumnItem>
               <ColumnItem>
                 <Text text="+351 918335271" />
@@ -43,7 +53,7 @@ const Component: FC = () => (
       <ColumnItem alignText="end" size="auto" align="center">
         <StackLayout gap={2}>
           <StackItem>
-            <Text className="is-media" text="Social Media" size={4} color="primary" />
+            <Title text="Social Media" size={4} />
           </StackItem>
           <StackItem>
             <ColumnLayout gap={2} isReverted>

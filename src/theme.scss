@@ -1,3 +1,6 @@
+// Path
+$path-dots: '~dots';
+
 // Colors
 $color-theme: 'dark';
 
@@ -11,4 +14,4 @@ $text-family: 'Titillium Web', 'Helvetica', 'Arial', sans-serif;
 $text-size: 12px;
 
 // Import
-@import '~dots/src/material/scss/variables/_all';
+@import '~dots/src/material/scss/utilities/_all';

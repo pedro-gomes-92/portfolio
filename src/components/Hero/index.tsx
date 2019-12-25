@@ -26,7 +26,7 @@ const Section: FC = () => (
         </StackLayout>
       </StackItem>
       <StackItem alignText="center">
-        <Link icon="down" size="large" to={`#${ABOUT_NAME}`} />
+        <Link icon="down" size="medium" to={`#${ABOUT_NAME}`} />
       </StackItem>
     </StackLayout>
   </Hero>

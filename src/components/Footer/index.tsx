@@ -5,9 +5,9 @@ const Component: FC = () => (
   <Footer>
     <NavBar>
       <>
-        <Text text="Made with " />
-        <Icon name="heart" />
-        <Text text=" by Pedro Gomes" />
+        <Text text="Made with " size="small" />
+        <Icon name="heart" color="danger" size="small" />
+        <Text text=" by Pedro Gomes" size="small" />
       </>
     </NavBar>
   </Footer>

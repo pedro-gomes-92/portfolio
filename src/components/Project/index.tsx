@@ -10,7 +10,7 @@ interface Props {
 const Component: FC<Props> = ({ title, name }: Props) => (
   <Box className={classnames('is-project', `is-${name}`)}>
     <CenterLayout>
-      <Title size={5} text={title} />
+      <Title size={5} text={title} isBold />
     </CenterLayout>
   </Box>
 );

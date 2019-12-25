@@ -1,5 +1,12 @@
-.footer {
-  .is-media {
+.is-contact {
+  .title {
     text-transform: uppercase;
+    letter-spacing: 0.12rem;
+  }
+
+  .link {
+    padding: 0.25rem;
+    border: 1px solid $color-primary;
+    border-radius: 4px;
   }
 }

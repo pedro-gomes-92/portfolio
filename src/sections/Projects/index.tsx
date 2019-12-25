@@ -7,13 +7,13 @@ import { NAME } from './constants';
 const Section: FC = () => (
   <DotsSection attribute={{ id: NAME }}>
     <ColumnLayout isWrapping gap={4}>
-      <ColumnItem>
+      <ColumnItem size={4}>
         <Project name="dots" title="Dots" />
       </ColumnItem>
-      <ColumnItem>
+      <ColumnItem size={4}>
         <Project name="scripter" title="Scripter" />
       </ColumnItem>
-      <ColumnItem>
+      <ColumnItem size={4}>
         <Project name="coming-soon" title="Coming Soon" />
       </ColumnItem>
     </ColumnLayout>
