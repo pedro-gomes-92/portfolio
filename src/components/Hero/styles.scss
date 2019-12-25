@@ -1,0 +1,16 @@
+.hero {
+  @include background-image;
+
+  &.is-fullheight-with-navbar {
+    min-height: 100vh;
+  }
+
+  &::before {
+    background-image: url('./assets/home.jpg');
+    background-attachment: fixed;
+  }
+
+  .title {
+    letter-spacing: 0.12rem;
+  }
+}

@@ -1,0 +1,14 @@
+// Colors
+$color-theme: 'dark';
+
+$color-background: #272727;
+$color-background-inverted: #ffffff;
+$color-primary: #ff652f;
+$color-primary-inverted: $color-background-inverted;
+
+// Typography
+$text-family: 'Titillium Web', 'Helvetica', 'Arial', sans-serif;
+$text-size: 12px;
+
+// Import
+@import '~dots/src/material/scss/variables/_all';
