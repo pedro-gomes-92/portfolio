@@ -1,18 +1,44 @@
-import React, { FC } from 'react';
+import React, { FC, useState, useEffect } from 'react';
+import classnames from 'classnames';
 import { Header, NavBar, Link } from 'dots';
 
-import { NAME as CONTACT_NAME } from 'sections/Contact/constants';
-import { NAME as ABOUT_NAME } from 'sections/About/constants';
-import { NAME as PROJECTS_NAME } from 'sections/Projects/constants';
+import { isScrolling as isWindowScrolling, getCurrent } from './utils';
 
-const Component: FC = () => (
-  <Header>
-    <NavBar>
-      <Link text="About" size={5} to={`#${ABOUT_NAME}`} color="primary" />
-      <Link text="Projects" size={5} to={`#${PROJECTS_NAME}`} color="primary" />
-      <Link text="Contact" size={5} to={`#${CONTACT_NAME}`} color="primary" />
-    </NavBar>
-  </Header>
-);
+interface Props {
+  elements: HTMLElement[];
+}
+
+const Component: FC<Props> = ({ elements }: Props) => {
+  const [isScrolling, setIsScrolling] = useState(isWindowScrolling());
+  const [current, setCurrent] = useState<string | null>(null);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolling(isWindowScrolling());
+      setCurrent(getCurrent(elements));
+    };
+
+    window.addEventListener('scroll', handleScroll);
+  }, [elements]);
+
+  return (
+    <Header className={classnames({ 'is-scrolling': isScrolling })}>
+      <NavBar>
+        {elements.map(element => {
+          const name = element.getAttribute('id') || '';
+          return (
+            <Link
+              key={`key-header-item-${name}`}
+              text={name}
+              size={5}
+              to={`#${name}`}
+              color={current === name ? 'primary' : undefined}
+            />
+          );
+        })}
+      </NavBar>
+    </Header>
+  );
+};
 
 export default Component;

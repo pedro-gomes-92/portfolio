@@ -1,20 +1,2 @@
-@import '../../helpers';
-
-.is-project {
-  @include background-image;
-  .text {
-    letter-spacing: 0.12rem;
-  }
-
-  &.is {
-    &-dots::before {
-      background-image: url('./assets/dots.jpg');
-    }
-    &-scripter::before {
-      background-image: url('./assets/scripter.jpg');
-    }
-    &-coming-soon::before {
-      background-image: url('./assets/coming-soon.jpg');
-    }
-  }
+.is-projects {
 }

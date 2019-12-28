@@ -1,0 +1,8 @@
+.loaders.is-details-loading {
+  cursor: initial;
+
+  .overlay {
+    background-color: $color-background;
+    opacity: 0.75;
+  }
+}

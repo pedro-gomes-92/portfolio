@@ -1,27 +1,22 @@
 import React, { FC } from 'react';
-import {
-  Section as DotsSections,
-  ColumnLayout,
-  ColumnItem,
-  StackLayout,
-  StackItem,
-  Text,
-  Link,
-  Icon,
-  Title,
-} from 'dots';
+import { ColumnLayout, ColumnItem, StackLayout, StackItem, Text, Link, Icon, Title } from 'dots';
 
+import PortSection, { Props as SectionProps } from 'components/Section';
 import { NAME } from './constants';
 
-const Component: FC = () => (
-  <DotsSections attribute={{ id: NAME }} className="is-contact">
-    <ColumnLayout gap={4}>
+interface Props {
+  reference: SectionProps['reference'];
+}
+
+const Component: FC<Props> = ({ reference }: Props) => (
+  <PortSection name={NAME} reference={reference}>
+    <ColumnLayout gap={2}>
       <ColumnItem>
-        <StackLayout gap={4}>
+        <StackLayout gap={2}>
           <StackItem>
-            <ColumnLayout gap={2} align="center">
+            <ColumnLayout gap={1} align="center">
               <ColumnItem size="auto">
-                <Icon name="home" color="primary" />
+                <Icon name="pin" color="primary" size="medium" />
               </ColumnItem>
               <ColumnItem>
                 <Text text="Berlin, Germany" />
@@ -29,9 +24,9 @@ const Component: FC = () => (
             </ColumnLayout>
           </StackItem>
           <StackItem>
-            <ColumnLayout gap={2} align="center">
+            <ColumnLayout gap={1} align="center">
               <ColumnItem size="auto">
-                <Icon name="email" color="primary" />
+                <Icon name="email" color="primary" size="medium" />
               </ColumnItem>
               <ColumnItem>
                 <Text text="pedro.work.92@gmail.com" />
@@ -39,9 +34,9 @@ const Component: FC = () => (
             </ColumnLayout>
           </StackItem>
           <StackItem>
-            <ColumnLayout gap={2} align="center">
+            <ColumnLayout gap={1} align="center">
               <ColumnItem size="auto">
-                <Icon name="phone" color="primary" />
+                <Icon name="phone" color="primary" size="medium" />
               </ColumnItem>
               <ColumnItem>
                 <Text text="+351 918335271" />
@@ -51,27 +46,27 @@ const Component: FC = () => (
         </StackLayout>
       </ColumnItem>
       <ColumnItem alignText="end" size="auto" align="center">
-        <StackLayout gap={2}>
+        <StackLayout gap={1}>
           <StackItem>
             <Title text="Social Media" size={4} />
           </StackItem>
           <StackItem>
-            <ColumnLayout gap={2} isReverted>
+            <ColumnLayout gap={1} isReverted>
               <ColumnItem size="auto">
-                <Link icon="linkedin" to="" color="primary" />
+                <Link icon="linkedin" isNewTab to="https://www.linkedin.com/in/pedro-gomes-746636a3/" color="primary" />
               </ColumnItem>
               <ColumnItem size="auto">
-                <Link icon="facebook" to="" color="primary" />
+                <Link icon="facebook" isNewTab to="https://www.facebook.com/pedro.gomes.14811692" color="primary" />
               </ColumnItem>
               <ColumnItem size="auto">
-                <Link icon="github" to="" color="primary" />
+                <Link icon="github" isNewTab to="https://github.com/pedro-gomes-92" color="primary" />
               </ColumnItem>
             </ColumnLayout>
           </StackItem>
         </StackLayout>
       </ColumnItem>
     </ColumnLayout>
-  </DotsSections>
+  </PortSection>
 );
 
 export default Component;

@@ -7,7 +7,7 @@ const Component: FC = () => (
       <>
         <Text text="Made with " size="small" />
         <Icon name="heart" color="danger" size="small" />
-        <Text text=" by Pedro Gomes" size="small" />
+        <Text text=" by Pedro Gomes. Powered by Dots." size="small" />
       </>
     </NavBar>
   </Footer>

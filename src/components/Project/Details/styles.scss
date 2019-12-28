@@ -1,0 +1,19 @@
+.is-project-modal {
+  cursor: initial;
+
+  .card {
+    border-left: 8px solid $color-primary;
+
+    &-footer {
+      border-top: none;
+    }
+
+    > .layout-border > .is-center {
+      overflow-y: visible;
+    }
+  }
+}
+
+@import './Loader/styles';
+@import './Category/styles';
+@import './Technology/styles';

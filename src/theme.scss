@@ -13,5 +13,11 @@ $color-primary-inverted: $color-background-inverted;
 $text-family: 'Titillium Web', 'Helvetica', 'Arial', sans-serif;
 $text-size: 12px;
 
+// Gap
+$gap-elements: 16px;
+
+// Components
+$navbar-container-height: 4.25rem;
+
 // Import
 @import '~dots/src/material/scss/utilities/_all';

@@ -1,23 +1,50 @@
 import React, { FC } from 'react';
-import { Section as DotsSection, ColumnLayout, ColumnItem, Image, Title, Paragraph } from 'dots';
+import { ColumnLayout, ColumnItem, Image, Title, Text } from 'dots';
+
+import PortSection, { Props as SectionProps } from 'components/Section';
 import profile from './assets/profile.jpeg';
 import { NAME } from './constants';
 
-const Section: FC = () => (
-  <DotsSection attribute={{ id: NAME }}>
-    <ColumnLayout gap={4}>
-      <ColumnItem>
-        <Image source={profile} />
-      </ColumnItem>
-      <ColumnItem>
-        <Title text="Hi" color="primary" />
-        <Paragraph text="My name is Pedro Gomes, born and raised in Almada, Portugal." />
-        <Paragraph text="My work consists in developing and maintaining front end applications and libraries, using the latest technologies." />
-        <Paragraph text="I always bring new ideas and solutions to a company, to improve its performance and quality." />
-        <Paragraph text="Constantly seeking new challenges and opportunities to make the next big step in my career." />
-      </ColumnItem>
-    </ColumnLayout>
-  </DotsSection>
-);
+interface Props {
+  reference: SectionProps['reference'];
+}
+
+const Section: FC<Props> = ({ reference }: Props) => {
+  return (
+    <PortSection name={NAME} reference={reference}>
+      <ColumnLayout gap={2}>
+        <ColumnItem>
+          <Image source={profile} />
+        </ColumnItem>
+        <ColumnItem>
+          <Title text="Hi" color="primary" />
+          <Text text="My name is Pedro Gomes, born and raised in Almada, Portugal. " />
+          <br />
+          <Text text="My work consists in developing and maintaining " />
+          <Text text="front end" color="primary" />
+          <Text text=" applications and libraries, using the " />
+          <Text text="latest technologies" color="primary" />
+          <Text text="." />
+          <br />
+          <Text text="I always bring new " />
+          <Text text="ideas" color="primary" />
+          <Text text=" and " />
+          <Text text="solutions" color="primary" />
+          <Text text=" to a company, to improve its " />
+          <Text text="performance" color="primary" />
+          <Text text=" and " />
+          <Text text="quality" color="primary" />
+          <Text text="." />
+          <br />
+          <Text text="Constantly seeking new " />
+          <Text text="challenges" color="primary" />
+          <Text text=" and " />
+          <Text text="opportunities" color="primary" />
+          <Text text=" to make the next big step in my career." />
+        </ColumnItem>
+      </ColumnLayout>
+    </PortSection>
+  );
+};
 
 export default Section;

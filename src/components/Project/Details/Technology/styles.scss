@@ -1,0 +1,19 @@
+.is-technology {
+  transition: transform $animation-duration-fast;
+  transform: scale(1);
+
+  .text {
+    transition: color $animation-duration-fast;
+    color: color-intensity($color-background-inverted, lighten, 15);
+    text-transform: uppercase;
+    letter-spacing: 0.12rem;
+  }
+
+  &:hover {
+    transform: scale(1.1);
+
+    .text {
+      color: $color-background-inverted;
+    }
+  }
+}

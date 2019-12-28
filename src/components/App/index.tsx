@@ -1,4 +1,4 @@
-import React, { FC } from 'react';
+import React, { FC, useState } from 'react';
 import { Container } from 'dots';
 
 import Header from 'components/Header';
@@ -10,15 +10,21 @@ import Projects from 'sections/Projects';
 import Contact from 'sections/Contact';
 
 const Component: FC = () => {
+  const [about, setAbout] = useState<HTMLElement>();
+  const [projects, setProjects] = useState<HTMLElement>();
+  const [contact, setContact] = useState<HTMLElement>();
+
+  const elements = [about, projects, contact].filter(element => element !== undefined) as HTMLElement[];
+
   return (
     <>
-      <Header />
+      <Header elements={elements} />
       <Hero />
 
       <Container>
-        <About />
-        <Projects />
-        <Contact />
+        <About reference={element => setAbout(element)} />
+        <Projects reference={element => setProjects(element)} />
+        <Contact reference={element => setContact(element)} />
       </Container>
       <Footer />
     </>

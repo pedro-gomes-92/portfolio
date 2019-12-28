@@ -2,17 +2,45 @@
   position: fixed;
   left: 0;
   right: 0;
-  z-index: 1;
-  background-color: transparent;
+  z-index: 2;
+
+  transition: background-color $animation-duration-fast;
+
+  &:not(.is-scrolling) {
+    background-color: transparent;
+  }
+
+  .navbar {
+    background-color: inherit;
+  }
 
   .link {
     .text {
       text-transform: uppercase;
       letter-spacing: 0.12rem;
-      font-weight: bold;
+
+      transition: all $animation-duration-fast;
 
       &:hover {
         text-decoration: none;
+      }
+
+      &::after {
+        transition: transform $animation-duration-fast;
+        display: inline-block;
+        width: 100%;
+        content: '';
+        border-bottom: 4px solid #ff652f;
+        position: absolute;
+        bottom: 6px;
+        left: 50%;
+        transform: translateX(-50%) scale(0);
+      }
+
+      &.is-primary {
+        &::after {
+          transform: translateX(-50%) scale(0.35);
+        }
       }
     }
   }

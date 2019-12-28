@@ -4,9 +4,9 @@ import { NAME as ABOUT_NAME } from 'sections/About/constants';
 
 const Section: FC = () => (
   <Hero hasNavBar>
-    <StackLayout gap={12}>
+    <StackLayout gap={6}>
       <StackItem alignText="center">
-        <StackLayout gap={4}>
+        <StackLayout gap={2}>
           <StackItem>
             <Title text="Pedro Gomes" color="primary" />
           </StackItem>
