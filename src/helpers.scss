@@ -16,3 +16,38 @@
     background-size: cover;
   }
 }
+
+@mixin custom-underline {
+  position: relative;
+
+  &::after {
+    transition: transform $animation-duration-fast, border-color $animation-duration-fast;
+    display: inline-block;
+    width: 100%;
+    content: '';
+    border-bottom: 2px solid $color-primary;
+    position: absolute;
+    bottom: -4px;
+    left: 50%;
+    transform: translateX(-50%) scaleX(0.5);
+  }
+
+  &:hover {
+    &::after {
+      border-color: color-hover($color-primary);
+    }
+  }
+
+  &:active {
+    &::after {
+      border-color: $color-primary;
+    }
+  }
+
+  &:hover,
+  &:active {
+    &::after {
+      transform: translateX(-50%) scaleX(1);
+    }
+  }
+}

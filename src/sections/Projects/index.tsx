@@ -9,7 +9,7 @@ interface Props {
   reference: SectionProps['reference'];
 }
 
-const Section: FC<Props> = ({ reference }: Props) => (
+const Section: FC<Props> = ({ reference }) => (
   <PortSection name={NAME} reference={reference}>
     <ColumnLayout isWrapping gap={4}>
       <ColumnItem size={4}>
@@ -20,7 +20,7 @@ const Section: FC<Props> = ({ reference }: Props) => (
             'Dots is a front end library, ready to be used in any front end web application.',
             'Includes all types of components (e.g. layouts, containers, actions, texts, charts), formats (e.g. date, currency, number), themes (e.g. colors, shapes, typography, iconography) and much more.',
           ]}
-          categories={['front end', 'library', 'web']}
+          categories={['frontend', 'library', 'web']}
           sourceCode="https://github.com/pedro-gomes-92/dots"
           technologies={['bulma', 'chartist', 'sass', 'typescript', 'react', 'jest', 'webpack']}
         />
@@ -33,7 +33,7 @@ const Section: FC<Props> = ({ reference }: Props) => (
             'Scripter is a vscode extension, where the developer can apply shortcuts to easily execute custom commands.',
             'Includes the ability to see the progress of each command and act according to his needs (e.g. stop, repeat, run).',
           ]}
-          categories={['front end', 'extension', 'desktop']}
+          categories={['frontend', 'extension', 'desktop']}
           sourceCode="https://github.com/pedro-gomes-92/scripter"
           technologies={['typescript', 'vscode']}
         />

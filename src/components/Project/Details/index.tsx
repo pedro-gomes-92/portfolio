@@ -16,7 +16,7 @@ export interface Props {
   onClose: (event: React.MouseEvent) => void;
 }
 
-const Component: FC<Props> = ({ title, description, categories, technologies, onClose, sourceCode }: Props) => {
+const Component: FC<Props> = ({ title, description, categories, technologies, onClose, sourceCode }) => {
   return (
     <Modal
       title={title}

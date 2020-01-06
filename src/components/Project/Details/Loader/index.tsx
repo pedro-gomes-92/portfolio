@@ -1,6 +1,8 @@
 import React, { FC } from 'react';
-import { AreaLoader } from 'dots';
+import { LoadingComponentProps } from 'react-loadable';
 
-const Component: FC = () => <AreaLoader className="is-details-loading" hasOverlay />;
+import Loader from 'components/Loader';
+
+const Component: FC<LoadingComponentProps> = props => <Loader className="is-details" hasOverlay {...props} />;
 
 export default Component;

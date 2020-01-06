@@ -1,6 +1,8 @@
 import React, { FC } from 'react';
-import { AreaLoader } from 'dots';
+import { LoadingComponentProps } from 'react-loadable';
 
-const Component: FC = () => <AreaLoader className="is-application-loading" />;
+import Loader from 'components/Loader';
+
+const Component: FC<LoadingComponentProps> = props => <Loader className="is-application" {...props} />;
 
 export default Component;

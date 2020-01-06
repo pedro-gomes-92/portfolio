@@ -8,7 +8,7 @@ interface Props {
   reference: SectionProps['reference'];
 }
 
-const Component: FC<Props> = ({ reference }: Props) => (
+const Component: FC<Props> = ({ reference }) => (
   <PortSection name={NAME} reference={reference}>
     <ColumnLayout gap={2}>
       <ColumnItem>

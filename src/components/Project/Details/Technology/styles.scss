@@ -4,7 +4,7 @@
 
   .text {
     transition: color $animation-duration-fast;
-    color: color-intensity($color-background-inverted, lighten, 15);
+    color: $color-background-inverted-soft;
     text-transform: uppercase;
     letter-spacing: 0.12rem;
   }

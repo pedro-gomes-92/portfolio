@@ -8,7 +8,7 @@ interface Props {
   name: Name;
 }
 
-const Component: FC<Props> = ({ name }: Props) => {
+const Component: FC<Props> = ({ name }) => {
   return <Tag className={classnames('is-category', `is-${name}`)} text={name} />;
 };
 

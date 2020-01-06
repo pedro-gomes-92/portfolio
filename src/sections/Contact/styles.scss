@@ -1,7 +1,25 @@
 .is-contact {
   .link {
+    transition: all $animation-duration-fast;
     padding: 0.25rem;
-    border: 1px solid $color-primary;
+    border: 1px solid $link-color;
     border-radius: 4px;
+
+    &.is {
+      @each $name, $pair in $colors {
+        $color: nth($pair, 1);
+        &-#{$name} {
+          border-color: $color;
+
+          &:hover {
+            border-color: color-hover($color);
+          }
+
+          &:active {
+            border-color: color-active($color);
+          }
+        }
+      }
+    }
   }
 }

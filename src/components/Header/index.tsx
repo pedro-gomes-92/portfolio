@@ -8,7 +8,7 @@ interface Props {
   elements: HTMLElement[];
 }
 
-const Component: FC<Props> = ({ elements }: Props) => {
+const Component: FC<Props> = ({ elements }) => {
   const [isScrolling, setIsScrolling] = useState(isWindowScrolling());
   const [current, setCurrent] = useState<string | null>(null);
 
@@ -32,7 +32,7 @@ const Component: FC<Props> = ({ elements }: Props) => {
               text={name}
               size={5}
               to={`#${name}`}
-              color={current === name ? 'primary' : undefined}
+              className={classnames({ 'is-active': current === name })}
             />
           );
         })}

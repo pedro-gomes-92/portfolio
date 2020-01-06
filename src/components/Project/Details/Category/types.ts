@@ -1,4 +1,4 @@
-type TechnologyName = 'front end' | 'back end';
+type TechnologyName = 'frontend' | 'backend';
 type ProjectName = 'library' | 'application' | 'plugin' | 'extension';
 type TargetName = 'web' | 'editor' | 'desktop' | 'mobile';
 

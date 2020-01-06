@@ -8,7 +8,7 @@ interface Props {
   name: Name;
 }
 
-const Component: FC<Props> = ({ name }: Props) => {
+const Component: FC<Props> = ({ name }) => {
   const { image, url } = getData(name);
   return (
     <StackLayout className={classnames('is-technology', `is-${name}`)}>

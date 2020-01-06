@@ -2,7 +2,7 @@ import React, { FC } from 'react';
 import { Hero, StackItem, StackLayout, Title, Text, Link } from 'dots';
 import { NAME as ABOUT_NAME } from 'sections/About/constants';
 
-const Section: FC = () => (
+const Component: FC = () => (
   <Hero hasNavBar>
     <StackLayout gap={6}>
       <StackItem alignText="center">
@@ -32,4 +32,4 @@ const Section: FC = () => (
   </Hero>
 );
 
-export default Section;
+export default Component;

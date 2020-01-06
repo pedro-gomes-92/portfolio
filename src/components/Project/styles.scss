@@ -4,16 +4,30 @@
   overflow: hidden;
   cursor: not-allowed;
 
+  > .layout-center {
+    .text {
+      color: $color-background-inverted-soft;
+    }
+  }
+
   &::before {
     border-radius: $shape-radius;
   }
 
   &:not(.is-disabled) {
     cursor: pointer;
+
+    > .layout-center {
+      .text {
+        color: $color-background-inverted;
+      }
+    }
+
     &::before {
       transition: all $animation-duration-fast;
       transform: scale(1);
     }
+
     &:hover,
     &.is-modal-active {
       &::before {

@@ -6,6 +6,15 @@
 
     &-footer {
       border-top: none;
+
+      .link {
+        transition: color $animation-duration-fast;
+        @include custom-underline;
+
+        .text:hover {
+          text-decoration: none;
+        }
+      }
     }
 
     > .layout-border > .is-center {
