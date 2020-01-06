@@ -20,6 +20,6 @@ $gap-elements: 16px;
 $navbar-container-height: 4.25rem;
 
 // Import
-@import '~dots/src/material/scss/utilities/_all';
+@import '~dots/src/material/utilities/_all';
 
 $color-background-inverted-soft: color-intensity($color-background-inverted, lighten, 15);
