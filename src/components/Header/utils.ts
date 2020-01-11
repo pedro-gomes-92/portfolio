@@ -26,4 +26,11 @@ export const getCurrent = (elements: HTMLElement[]): string | null => {
   return target;
 };
 
-export const scrollTo = (element: HTMLElement) => {};
+export const scrollTo = (element: HTMLElement, offset: number = 0) => {
+  const { top: relativeTop } = element.getBoundingClientRect();
+
+  window.scrollTo({
+    top: relativeTop + offset,
+    behavior: 'smooth',
+  });
+};

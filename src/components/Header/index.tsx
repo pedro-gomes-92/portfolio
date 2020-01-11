@@ -11,6 +11,7 @@ interface Props {
 const Component: FC<Props> = ({ elements }) => {
   const [isScrolling, setIsScrolling] = useState(isWindowScrolling());
   const [current, setCurrent] = useState<string | null>(null);
+  const [header, setHeader] = useState<HTMLElement>();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -22,7 +23,12 @@ const Component: FC<Props> = ({ elements }) => {
   }, [elements]);
 
   return (
-    <Header className={classnames({ 'is-scrolling': isScrolling })}>
+    <Header
+      reference={element => {
+        setHeader(element);
+      }}
+      className={classnames({ 'is-scrolling': isScrolling })}
+    >
       <NavBar>
         {elements.map(element => {
           const name = element.getAttribute('id') || '';
@@ -32,7 +38,7 @@ const Component: FC<Props> = ({ elements }) => {
               text={name}
               size={5}
               onClick={() => {
-                scrollTo(element);
+                scrollTo(element, header ? -header.clientHeight : 0);
               }}
               className={classnames({ 'is-active': current === name })}
             />
