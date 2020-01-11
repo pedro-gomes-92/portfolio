@@ -28,7 +28,13 @@
       transform: scale(1);
     }
 
-    &:hover,
+    @include hover {
+      &::before {
+        transform: scale(1.1);
+        opacity: 0.75;
+      }
+    }
+
     &.is-modal-active {
       &::before {
         transform: scale(1.1);

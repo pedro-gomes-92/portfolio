@@ -14,7 +14,7 @@
     background-color: inherit;
   }
 
-  .link {
+  .button {
     transition: color $animation-duration-fast;
 
     @include custom-underline;
@@ -25,7 +25,7 @@
 
     &.is-active {
       &:not(:hover) {
-        color: $link-color-active;
+        color: $button-text-color-active;
       }
       &::after {
         transform: translateX(-50%) scaleX(1);
@@ -35,7 +35,7 @@
     .text {
       text-transform: uppercase;
       letter-spacing: 0.12rem;
-      &:hover {
+      @include hover {
         text-decoration: none;
       }
     }

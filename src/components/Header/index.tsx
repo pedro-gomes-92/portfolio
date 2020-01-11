@@ -1,8 +1,8 @@
 import React, { FC, useState, useEffect } from 'react';
 import classnames from 'classnames';
-import { Header, NavBar, Link } from 'dots';
+import { Header, NavBar, TextButton } from 'dots';
 
-import { isScrolling as isWindowScrolling, getCurrent } from './utils';
+import { isScrolling as isWindowScrolling, getCurrent, scrollTo } from './utils';
 
 interface Props {
   elements: HTMLElement[];
@@ -27,11 +27,13 @@ const Component: FC<Props> = ({ elements }) => {
         {elements.map(element => {
           const name = element.getAttribute('id') || '';
           return (
-            <Link
+            <TextButton
               key={`key-header-item-${name}`}
               text={name}
               size={5}
-              to={`#${name}`}
+              onClick={() => {
+                scrollTo(element);
+              }}
               className={classnames({ 'is-active': current === name })}
             />
           );

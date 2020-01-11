@@ -25,3 +25,5 @@ export const getCurrent = (elements: HTMLElement[]): string | null => {
 
   return target;
 };
+
+export const scrollTo = (element: HTMLElement) => {};

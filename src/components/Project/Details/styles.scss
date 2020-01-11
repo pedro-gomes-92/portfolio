@@ -11,8 +11,10 @@
         transition: color $animation-duration-fast;
         @include custom-underline;
 
-        .text:hover {
-          text-decoration: none;
+        .text {
+          @include hover {
+            text-decoration: none;
+          }
         }
       }
     }

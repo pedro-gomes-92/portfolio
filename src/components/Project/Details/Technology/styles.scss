@@ -9,7 +9,7 @@
     letter-spacing: 0.12rem;
   }
 
-  &:hover {
+  @include hover {
     transform: scale(1.1);
 
     .text {

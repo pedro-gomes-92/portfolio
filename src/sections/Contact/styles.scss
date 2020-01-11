@@ -11,11 +11,11 @@
         &-#{$name} {
           border-color: $color;
 
-          &:hover {
+          @include hover {
             border-color: color-hover($color);
           }
 
-          &:active {
+          @include active {
             border-color: color-active($color);
           }
         }
