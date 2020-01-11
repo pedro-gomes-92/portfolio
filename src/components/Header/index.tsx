@@ -1,19 +1,18 @@
 import React, { FC, useState, useEffect } from 'react';
 import classnames from 'classnames';
-import { Header, NavBar, TextButton } from 'dots';
+import { Header, NavBar, TextButton, HeaderProps } from 'dots';
 
 import { isScrolling as isWindowScrolling, getCurrent, scrollTo } from './utils';
 
 interface Props {
+  reference: HeaderProps['reference'];
   elements: HTMLElement[];
+  offsetScroll: number;
 }
 
-const Component: FC<Props> = ({ elements }) => {
+const Component: FC<Props> = ({ elements, reference, offsetScroll }) => {
   const [isScrolling, setIsScrolling] = useState(isWindowScrolling());
   const [current, setCurrent] = useState<string | null>(null);
-  const [header, setHeader] = useState<HTMLElement>();
-
-  const offsetTop = header ? header.clientHeight : 0;
 
   useEffect(() => {
     const handleScroll = () => {
@@ -23,19 +22,14 @@ const Component: FC<Props> = ({ elements }) => {
       }
 
       setIsScrolling(isWindowScrolling());
-      setCurrent(getCurrent(elements, offsetTop));
+      setCurrent(getCurrent(elements, offsetScroll));
     };
 
     window.addEventListener('scroll', handleScroll);
-  }, [elements, offsetTop]);
+  }, [elements, offsetScroll]);
 
   return (
-    <Header
-      reference={element => {
-        setHeader(element);
-      }}
-      className={classnames({ 'is-scrolling': isScrolling })}
-    >
+    <Header reference={reference} className={classnames({ 'is-scrolling': isScrolling })}>
       <NavBar>
         {elements.map(element => {
           const name = element.getAttribute('id') || '';
@@ -45,7 +39,7 @@ const Component: FC<Props> = ({ elements }) => {
               text={name}
               size={5}
               onClick={() => {
-                scrollTo(element, -offsetTop);
+                scrollTo(element, -offsetScroll);
               }}
               className={classnames({ 'is-active': current === name })}
             />
@@ -54,6 +48,10 @@ const Component: FC<Props> = ({ elements }) => {
       </NavBar>
     </Header>
   );
+};
+
+Component.defaultProps = {
+  offsetScroll: 0,
 };
 
 export default Component;

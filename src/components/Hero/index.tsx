@@ -1,8 +1,14 @@
 import React, { FC } from 'react';
-import { Hero, StackItem, StackLayout, Title, Text, Link } from 'dots';
-import { NAME as ABOUT_NAME } from 'sections/About/constants';
+import { Hero, StackItem, StackLayout, Title, Text, TextButton } from 'dots';
 
-const Component: FC = () => (
+import { scrollTo } from 'utils';
+
+interface Props {
+  offsetScroll: number;
+  nextElement?: HTMLElement;
+}
+
+const Component: FC<Props> = ({ nextElement, offsetScroll }) => (
   <Hero hasNavBar>
     <StackLayout gap={6}>
       <StackItem alignText="center">
@@ -25,9 +31,19 @@ const Component: FC = () => (
           </StackItem>
         </StackLayout>
       </StackItem>
-      <StackItem alignText="center">
-        <Link icon="down" size="medium" to={`#${ABOUT_NAME}`} />
-      </StackItem>
+      <>
+        {nextElement && (
+          <StackItem alignText="center">
+            <TextButton
+              icon="down"
+              size="medium"
+              onClick={() => {
+                scrollTo(nextElement, -offsetScroll);
+              }}
+            />
+          </StackItem>
+        )}
+      </>
     </StackLayout>
   </Hero>
 );

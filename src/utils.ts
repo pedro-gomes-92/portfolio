@@ -7,3 +7,11 @@ export const loadImage = (path: string): Promise<HTMLImageElement> =>
       resolve(img);
     });
   });
+
+export const scrollTo = (element: HTMLElement, offset: number = 0) => {
+  const top = window.innerHeight + element.offsetTop;
+  window.scrollTo({
+    top: top + offset,
+    behavior: 'smooth',
+  });
+};

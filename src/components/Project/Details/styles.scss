@@ -8,7 +8,6 @@
       border-top: none;
 
       .link {
-        transition: color $animation-duration-fast;
         @include custom-underline;
 
         .text {

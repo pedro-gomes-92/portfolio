@@ -15,8 +15,6 @@
   }
 
   .button {
-    transition: color $animation-duration-fast;
-
     @include custom-underline;
 
     &::after {

@@ -1,6 +1,6 @@
 .is-contact {
   .link {
-    transition: all $animation-duration-fast;
+    transition: color $animation-duration-fast, border-color $animation-duration-fast;
     padding: 0.25rem;
     border: 1px solid $link-color;
     border-radius: 4px;

@@ -10,6 +10,8 @@ import Projects from 'sections/Projects';
 import Contact from 'sections/Contact';
 
 const Component: FC = () => {
+  const [offsetScroll, setOffsetScroll] = useState<number>(0);
+
   const [about, setAbout] = useState<HTMLElement>();
   const [projects, setProjects] = useState<HTMLElement>();
   const [contact, setContact] = useState<HTMLElement>();
@@ -18,8 +20,15 @@ const Component: FC = () => {
 
   return (
     <>
-      <Header elements={elements} />
-      <Hero />
+      <Header
+        reference={element => {
+          const offset = element ? element.clientHeight : 0;
+          setOffsetScroll(offset);
+        }}
+        elements={elements}
+        offsetScroll={offsetScroll}
+      />
+      <Hero nextElement={about} offsetScroll={offsetScroll} />
 
       <Container>
         <About reference={element => setAbout(element)} />
