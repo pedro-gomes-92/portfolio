@@ -6,20 +6,22 @@ export const isScrolling = () => {
   return getCurrentScrollPosition() > SCROLLING_HEIGHT;
 };
 
-export const getCurrent = (elements: HTMLElement[]): string | null => {
+export const getCurrent = (elements: HTMLElement[], offset: number = 0): string | null => {
   let target = null;
-  [...elements].reverse().forEach(element => {
-    const currentTop = getCurrentScrollPosition();
-    const currentBottom = currentTop + window.innerHeight;
+  [...elements].forEach((element, index) => {
+    const currentTop = getCurrentScrollPosition() + offset;
+    const currentBottom = window.innerHeight + currentTop - offset;
 
-    const { top: relativeTop, bottom: relativeBottom } = element.getBoundingClientRect();
+    const elementTop = window.innerHeight + element.offsetTop;
+    const elementBottom = elementTop + element.offsetHeight;
 
-    const top = relativeTop + currentTop;
-    const bottom = relativeBottom + currentTop;
+    const pageBottom = document.documentElement.offsetHeight;
 
-    if (currentBottom > top && currentBottom < bottom) {
+    if (
+      currentTop >= elementTop ||
+      (index === elements.length - 1 && currentBottom >= elementBottom && currentBottom === pageBottom)
+    ) {
       target = element.getAttribute('id');
-      return;
     }
   });
 
@@ -27,10 +29,10 @@ export const getCurrent = (elements: HTMLElement[]): string | null => {
 };
 
 export const scrollTo = (element: HTMLElement, offset: number = 0) => {
-  const { top: relativeTop } = element.getBoundingClientRect();
+  const top = window.innerHeight + element.offsetTop;
 
   window.scrollTo({
-    top: relativeTop + offset,
+    top: top + offset,
     behavior: 'smooth',
   });
 };

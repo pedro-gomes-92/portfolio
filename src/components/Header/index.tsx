@@ -13,14 +13,21 @@ const Component: FC<Props> = ({ elements }) => {
   const [current, setCurrent] = useState<string | null>(null);
   const [header, setHeader] = useState<HTMLElement>();
 
+  const offsetTop = header ? header.clientHeight : 0;
+
   useEffect(() => {
     const handleScroll = () => {
+      const active = document.activeElement as HTMLElement;
+      if (active) {
+        active.blur();
+      }
+
       setIsScrolling(isWindowScrolling());
-      setCurrent(getCurrent(elements));
+      setCurrent(getCurrent(elements, offsetTop));
     };
 
     window.addEventListener('scroll', handleScroll);
-  }, [elements]);
+  }, [elements, offsetTop]);
 
   return (
     <Header
@@ -38,7 +45,7 @@ const Component: FC<Props> = ({ elements }) => {
               text={name}
               size={5}
               onClick={() => {
-                scrollTo(element, header ? -header.clientHeight : 0);
+                scrollTo(element, -offsetTop);
               }}
               className={classnames({ 'is-active': current === name })}
             />
