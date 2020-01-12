@@ -25,5 +25,9 @@
 
   .is-socialmedia {
     justify-content: center;
+
+    @include screen($device-responsive-active) {
+      justify-content: end;
+    }
   }
 }
