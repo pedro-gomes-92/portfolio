@@ -51,7 +51,7 @@ const Component: FC<Props> = ({ reference }) => (
             <Title text="Social Media" size={4} />
           </StackItem>
           <StackItem>
-            <ColumnLayout gap={1} isReverted>
+            <ColumnLayout gap={1} isMobileActive isReverted className="is-socialmedia">
               <ColumnItem size="auto">
                 <Link icon="linkedin" isNewTab to="https://www.linkedin.com/in/pedro-gomes-746636a3/" color="primary" />
               </ColumnItem>
