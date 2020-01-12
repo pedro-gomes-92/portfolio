@@ -1,15 +1,15 @@
 import React, { FC } from 'react';
 import classnames from 'classnames';
 import { StackLayout, StackItem, ImageLink, Text } from 'dots';
-import { getData } from './utils';
 import { Name } from './types';
 
 interface Props {
   name: Name;
+  image: string;
+  url: string;
 }
 
-const Component: FC<Props> = ({ name }) => {
-  const { image, url } = getData(name);
+const Component: FC<Props> = ({ image, url, name }) => {
   return (
     <StackLayout className={classnames('is-technology', `is-${name}`)}>
       <StackItem alignText="center">

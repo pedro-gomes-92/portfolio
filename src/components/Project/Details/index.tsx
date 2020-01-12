@@ -1,7 +1,7 @@
 import React, { FC } from 'react';
 import { Modal, StackLayout, StackItem, Title, Paragraph, Link, ColumnLayout, ColumnItem } from 'dots';
 
-import { Name as TechnologyName } from 'components/Project/Details/Technology/types';
+import { Name as TechnologyName, Configs as TechnologyConfigs } from 'components/Project/Details/Technology/types';
 import { Name as CategoryName } from 'components/Project/Details/Category/types';
 
 import Category from './Category';
@@ -14,9 +14,10 @@ export interface Props {
   technologies: TechnologyName[];
   sourceCode: string;
   onClose: (event: React.MouseEvent) => void;
+  data?: TechnologyConfigs;
 }
 
-const Component: FC<Props> = ({ title, description, categories, technologies, onClose, sourceCode }) => {
+const Component: FC<Props> = ({ title, description, categories, technologies, onClose, sourceCode, data }) => {
   return (
     <Modal
       title={title}
@@ -42,13 +43,18 @@ const Component: FC<Props> = ({ title, description, categories, technologies, on
         </StackItem>
         <StackItem>
           <Title text="Technologies" size={5} />
-          <ColumnLayout isMobileActive isWrapping gap={1}>
-            {technologies.map(technology => (
-              <ColumnItem size="auto" key={`key-technology-${technology}`}>
-                <Technology name={technology} />
-              </ColumnItem>
-            ))}
-          </ColumnLayout>
+          {data && (
+            <ColumnLayout isMobileActive isWrapping gap={1}>
+              {technologies.map(technology => {
+                const { url, image } = data[technology];
+                return (
+                  <ColumnItem size="auto" key={`key-technology-${technology}`}>
+                    <Technology name={technology} url={url} image={image} />
+                  </ColumnItem>
+                );
+              })}
+            </ColumnLayout>
+          )}
         </StackItem>
       </StackLayout>
     </Modal>
