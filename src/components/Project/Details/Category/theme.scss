@@ -1,0 +1,37 @@
+$color-library: #14a76c;
+$color-library-inverted: $color-pampa;
+
+$color-frontend: #d83f87;
+$color-frontend-inverted: $color-pampa;
+
+$color-web: #747474;
+$color-web-inverted: $color-pampa;
+
+$color-extension: #f3d250;
+$color-extension-inverted: $color-shark;
+
+$color-desktop: #3f7cd8;
+$color-desktop-inverted: $color-pampa;
+
+$colors-tag: (
+  'library': (
+    $color-library,
+    $color-library-inverted,
+  ),
+  'frontend': (
+    $color-frontend,
+    $color-frontend-inverted,
+  ),
+  'web': (
+    $color-web,
+    $color-web-inverted,
+  ),
+  'extension': (
+    $color-extension,
+    $color-extension-inverted,
+  ),
+  'desktop': (
+    $color-desktop,
+    $color-desktop-inverted,
+  ),
+);

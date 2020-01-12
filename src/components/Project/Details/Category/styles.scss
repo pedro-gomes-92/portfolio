@@ -1,3 +1,14 @@
+@import './theme.scss';
+
 .is-category {
   width: 5rem;
+
+  &.is {
+    @each $name, $pair in $colors-tag {
+      &-#{$name} {
+        color: nth($pair, 2);
+        background-color: nth($pair, 1);
+      }
+    }
+  }
 }
