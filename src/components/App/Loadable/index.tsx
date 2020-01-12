@@ -7,7 +7,6 @@ import imgProfile from 'sections/About/assets/profile.jpeg';
 import imgDots from 'components/Project/assets/dots.jpg';
 import imgScripter from 'components/Project/assets/scripter.jpg';
 import imgComingSoon from 'components/Project/assets/coming-soon.jpg';
-
 import { loadImage } from 'utils';
 
 const Component = Loadable.Map<{}, any>({

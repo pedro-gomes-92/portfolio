@@ -1,15 +1,16 @@
 import React, { FC } from 'react';
-import { Footer, NavBar, Text, Icon } from 'dots';
+import { Footer, Text, Icon, ColumnLayout, ColumnItem } from 'dots';
 
 const Component: FC = () => (
   <Footer>
-    <NavBar>
-      <>
+    <ColumnLayout>
+      <ColumnItem />
+      <ColumnItem size="auto" align="center">
         <Text text="Made with " size="small" />
         <Icon name="heart" color="danger" size="small" />
         <Text text=" by Pedro Gomes. Powered by Dots." size="small" />
-      </>
-    </NavBar>
+      </ColumnItem>
+    </ColumnLayout>
   </Footer>
 );
 

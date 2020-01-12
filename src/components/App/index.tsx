@@ -34,8 +34,8 @@ const Component: FC = () => {
         <About reference={element => setAbout(element)} />
         <Projects reference={element => setProjects(element)} />
         <Contact reference={element => setContact(element)} />
+        <Footer />
       </Container>
-      <Footer />
     </>
   );
 };
