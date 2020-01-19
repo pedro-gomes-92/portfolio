@@ -6,11 +6,11 @@
 
   transition: background-color $animation-duration-fast;
 
-  &:not(.is-scrolling) {
-    background-color: transparent;
-  }
-
   @include screen($navbar-device-inline-active) {
+    &:not(.is-scrolling) {
+      background-color: transparent;
+    }
+
     .button {
       @include custom-underline;
 
