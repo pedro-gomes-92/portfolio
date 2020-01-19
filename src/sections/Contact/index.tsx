@@ -10,7 +10,7 @@ interface Props {
 
 const Component: FC<Props> = ({ reference }) => (
   <PortSection name={NAME} reference={reference}>
-    <ColumnLayout gap={2}>
+    <ColumnLayout gap={4}>
       <ColumnItem>
         <StackLayout gap={2}>
           <StackItem>

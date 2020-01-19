@@ -21,6 +21,13 @@
     > .layout-border > .is-center {
       overflow-y: visible;
     }
+
+    .is-mobile {
+      justify-content: center;
+      @include screen($device-responsive-active) {
+        justify-content: flex-start;
+      }
+    }
   }
 }
 

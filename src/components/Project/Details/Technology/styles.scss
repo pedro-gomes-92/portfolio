@@ -1,6 +1,7 @@
 .is-technology {
   transition: transform $animation-duration-fast;
   transform: scale(1);
+  width: 5.6rem;
 
   .text {
     transition: color $animation-duration-fast;

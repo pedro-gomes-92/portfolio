@@ -10,37 +10,39 @@
     background-color: transparent;
   }
 
-  .button {
-    @include custom-underline;
+  @include screen($navbar-device-inline-active) {
+    .button {
+      @include custom-underline;
 
-    &::after {
-      transform: translateX(-50%) scaleX(0);
-    }
-
-    &.is-active {
-      &:not(:hover) {
-        color: $button-text-color-active;
-      }
-    }
-
-    @include hover {
       &::after {
-        transform: translateX(-50%) scaleX(0.75);
+        transform: translateX(-50%) scaleX(0);
       }
-    }
 
-    @include active {
-      &::after {
-        transform: translateX(-50%) scaleX(0.75);
-      }
-    }
-
-    .text {
-      text-transform: uppercase;
-      letter-spacing: 0.12rem;
       @include hover {
-        text-decoration: none;
+        &::after {
+          transform: translateX(-50%) scaleX(0.75);
+        }
       }
+
+      @include active {
+        &::after {
+          transform: translateX(-50%) scaleX(0.75);
+        }
+      }
+
+      &.is-active {
+        &:not(:hover) {
+          color: $button-text-color-active;
+        }
+      }
+    }
+  }
+
+  .button .text {
+    text-transform: uppercase;
+    letter-spacing: 0.12rem;
+    @include hover {
+      text-decoration: none;
     }
   }
 }
