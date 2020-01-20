@@ -2,7 +2,7 @@ import React, { FC, useState, useEffect } from 'react';
 import classnames from 'classnames';
 import { Header, NavBar, TextButton, HeaderProps } from 'dots';
 
-import imgLogo from './assets/logo.svg';
+import { ReactComponent as LogoSVG } from './assets/logo.svg';
 import { isScrolling as isWindowScrolling, getCurrent, scrollTo } from './utils';
 
 interface Props {
@@ -31,7 +31,15 @@ const Component: FC<Props> = ({ elements, reference, offsetScroll }) => {
 
   return (
     <Header reference={reference} className={classnames({ 'is-scrolling': isScrolling })}>
-      <NavBar brand={imgLogo}>
+      <NavBar
+        logo={
+          <LogoSVG
+            onClick={() => {
+              scrollTo(document.body, -window.innerHeight);
+            }}
+          />
+        }
+      >
         {elements.map(element => {
           const name = element.getAttribute('id') || '';
           return (
