@@ -6,16 +6,19 @@ import { AreaLoader, AreaLoaderProps } from 'dots';
 interface Props extends LoadingComponentProps {
   className?: AreaLoaderProps['className'];
   hasOverlay?: AreaLoaderProps['hasOverlay'];
+  loader?: AreaLoaderProps['loader'];
 }
 
-const Component: FC<Props> = ({ className, pastDelay, isLoading, hasOverlay }) => {
-  let loader = null;
+const Component: FC<Props> = ({ className, pastDelay, isLoading, hasOverlay, loader }) => {
+  let loaderComponent = null;
 
   if (isLoading || pastDelay) {
-    loader = <AreaLoader className={classnames('is-loading', className)} hasOverlay={hasOverlay} />;
+    loaderComponent = (
+      <AreaLoader className={classnames('is-loading', className)} hasOverlay={hasOverlay} loader={loader} />
+    );
   }
 
-  return loader;
+  return loaderComponent;
 };
 
 export default Component;
