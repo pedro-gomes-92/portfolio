@@ -6,7 +6,7 @@ Portfolio is a react application, that not only shows all of my personal project
 
 ## Usage
 
-Since Portfolio is a react application, just click [here](https://pedro-gomes-92.github.io/portfolio/), to use it.
+Just click [here](https://pedro-gomes-92.github.io/portfolio/) to start using it.
 
 ## Getting Started
 
