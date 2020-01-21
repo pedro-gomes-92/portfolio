@@ -1,4 +1,4 @@
-import { SCROLLING_HEIGHT } from './constants';
+import { SCROLLING_HEIGHT, SCROLLING_OFFSET_LAST } from './constants';
 
 const getCurrentScrollPosition = (): number => window.pageYOffset;
 
@@ -19,7 +19,9 @@ export const getCurrent = (elements: HTMLElement[], offset: number = 0): string 
 
     if (
       currentTop >= elementTop ||
-      (index === elements.length - 1 && currentBottom >= elementBottom && currentBottom === pageBottom)
+      (index === elements.length - 1 &&
+        currentBottom >= elementBottom &&
+        currentBottom >= pageBottom - SCROLLING_OFFSET_LAST)
     ) {
       target = element.getAttribute('id');
     }
