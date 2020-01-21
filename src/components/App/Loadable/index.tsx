@@ -8,6 +8,7 @@ import imgDots from 'components/Project/assets/dots.jpg';
 import imgScripter from 'components/Project/assets/scripter.jpg';
 import imgComingSoon from 'components/Project/assets/coming-soon.jpg';
 import { loadImage } from 'utils';
+import { LOADING_DELAY } from './constants';
 
 const Component = Loadable.Map<{}, any>({
   loader: {
@@ -17,6 +18,12 @@ const Component = Loadable.Map<{}, any>({
     _imgDots: () => loadImage(imgDots),
     _imgScripter: () => loadImage(imgScripter),
     _imgComingSoon: () => loadImage(imgComingSoon),
+    _sleep: () =>
+      new Promise(resolve => {
+        setTimeout(() => {
+          resolve();
+        }, LOADING_DELAY);
+      }),
   },
   loading: Loader,
   render: ({ Component: LoadedComponent }, props) => {
