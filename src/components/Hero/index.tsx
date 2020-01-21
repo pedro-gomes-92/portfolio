@@ -25,7 +25,7 @@ const Component: FC<Props> = ({ nextElement, offsetScroll }) => (
                 <Text text="Front End Developer" size={5} />
               </StackItem>
               <StackItem>
-                <Text text="Mid Level" size={5} />
+                <Text text="Team Mentor" size={5} />
               </StackItem>
             </StackLayout>
           </StackItem>
