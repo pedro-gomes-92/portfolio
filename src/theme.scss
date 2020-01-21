@@ -10,8 +10,28 @@ $color-primary: #ff652f;
 $color-primary-inverted: $color-background-inverted;
 
 // Typography
-$text-family: 'Tsukushi A Round Gothic', 'Helvetica', 'Arial', sans-serif;
-$text-size: 12px;
+$text-primary-path: './assets/KaushanScript-Regular';
+@font-face {
+  font-family: 'Kaushan Script';
+  src: url('#{$text-primary-path}.eot');
+  src: url('#{$text-primary-path}.eot?#iefix') format('embedded-opentype'),
+    url('#{$text-primary-path}.woff2') format('woff2'), url('#{$text-primary-path}.woff') format('woff'),
+    url('#{$text-primary-path}.ttf') format('truetype'),
+    url('#{$text-primary-path}.svg#KaushanScript-Regular') format('svg');
+}
+
+$text-primary-family: 'Kaushan Script', 'Helvetica', 'Arial', sans-serif;
+
+$text-path: './assets/Strait-Regular';
+@font-face {
+  font-family: 'Strait';
+  src: url('#{$text-path}.eot');
+  src: url('#{$text-path}.eot?#iefix') format('embedded-opentype'), url('#{$text-path}.woff2') format('woff2'),
+    url('#{$text-path}.woff') format('woff'), url('#{$text-path}.ttf') format('truetype'),
+    url('#{$text-path}.svg#Strait-Regular') format('svg');
+}
+
+$text-family: 'Strait', 'Helvetica', 'Arial', sans-serif;
 
 // Gap
 $gap-elements: 16px;
