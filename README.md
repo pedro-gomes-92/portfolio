@@ -8,12 +8,12 @@ Portfolio is a react application, that not only shows all of my personal project
 
 ### Designs
 
-This project started from the following [mockup](https://xd.adobe.com/view/f1a497a2-9895-4ac2-773f-ab1033dfe82d-8795/).
-The logo was created [here](https://xd.adobe.com/view/9f2bc273-01f1-4e73-5323-680048be2b8f-e91a/).
+This project started from this [mockup](https://xd.adobe.com/view/f1a497a2-9895-4ac2-773f-ab1033dfe82d-8795/).
+The logo can also be checked [here](https://xd.adobe.com/view/9f2bc273-01f1-4e73-5323-680048be2b8f-e91a/).
 
 ### Website
 
-Just click [here](https://pedro-gomes-92.github.io/portfolio/) to start using it.
+To see the latest deployed version of the application, just click [here](https://pedro-gomes-92.github.io/portfolio/) to start using it.
 
 ## Getting Started
 
