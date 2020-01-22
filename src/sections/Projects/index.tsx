@@ -1,5 +1,5 @@
 import React, { FC } from 'react';
-import { ColumnLayout, ColumnItem } from 'dots';
+import { ColumnLayout, ColumnItem } from 'dots.js';
 
 import Project from 'components/Project';
 import PortSection, { Props as SectionProps } from 'components/Section';

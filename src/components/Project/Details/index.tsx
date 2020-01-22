@@ -1,5 +1,5 @@
 import React, { FC } from 'react';
-import { Modal, StackLayout, StackItem, Title, Paragraph, Link, ColumnLayout, ColumnItem } from 'dots';
+import { Modal, StackLayout, StackItem, Title, Paragraph, Link, ColumnLayout, ColumnItem } from 'dots.js';
 
 import { Name as TechnologyName, Configs as TechnologyConfigs } from 'components/Project/Details/Technology/types';
 import { Name as CategoryName } from 'components/Project/Details/Category/types';

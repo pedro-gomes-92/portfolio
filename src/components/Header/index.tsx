@@ -1,6 +1,6 @@
 import React, { FC, useState, useEffect } from 'react';
 import classnames from 'classnames';
-import { Header, NavBar, TextButton, HeaderProps } from 'dots';
+import { Header, NavBar, TextButton, HeaderProps } from 'dots.js';
 
 import { ReactComponent as LogoSVG } from './assets/logo.svg';
 import { isScrolling as isWindowScrolling, getCurrent, scrollTo } from './utils';

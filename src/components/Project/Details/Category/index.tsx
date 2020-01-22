@@ -1,6 +1,6 @@
 import React, { FC } from 'react';
 import classnames from 'classnames';
-import { Tag } from 'dots';
+import { Tag } from 'dots.js';
 
 import { Name } from './types';
 

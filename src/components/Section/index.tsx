@@ -1,5 +1,5 @@
 import React, { FC, ReactNode } from 'react';
-import { Section } from 'dots';
+import { Section } from 'dots.js';
 
 export interface Props {
   name: string;

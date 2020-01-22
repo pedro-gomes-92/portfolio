@@ -1,7 +1,7 @@
 import React, { FC } from 'react';
 import classnames from 'classnames';
 import { LoadingComponentProps } from 'react-loadable';
-import { AreaLoader, AreaLoaderProps } from 'dots';
+import { AreaLoader, AreaLoaderProps } from 'dots.js';
 
 interface Props extends LoadingComponentProps {
   className?: AreaLoaderProps['className'];

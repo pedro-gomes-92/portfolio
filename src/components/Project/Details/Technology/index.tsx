@@ -1,6 +1,6 @@
 import React, { FC } from 'react';
 import classnames from 'classnames';
-import { StackLayout, StackItem, ImageLink, Text } from 'dots';
+import { StackLayout, StackItem, ImageLink, Text } from 'dots.js';
 import { Name } from './types';
 
 interface Props {

@@ -1,5 +1,5 @@
 import React, { FC, useState } from 'react';
-import { Container } from 'dots';
+import { Container } from 'dots.js';
 
 import Header from 'components/Header';
 import Footer from 'components/Footer';

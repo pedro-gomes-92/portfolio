@@ -5641,9 +5641,9 @@
       }
     },
     "dots.js": {
-      "version": "0.0.2",
-      "resolved": "https://registry.npmjs.org/dots.js/-/dots.js-0.0.2.tgz",
-      "integrity": "sha512-ZzhrTtE1wgG9c4hJqL44ICl+cFSAzDPNw1QjwDBEohD1kG2/fV+ECaLADxW3vLW4P2xfdsylRVzwMxlhDik4QA==",
+      "version": "0.0.3",
+      "resolved": "https://registry.npmjs.org/dots.js/-/dots.js-0.0.3.tgz",
+      "integrity": "sha512-IUMByr9wxVT/3J3ZtgxIc+bi+dzBQb8cJ05rbB6zTiE7bt0hjC28vDMN1c/4/UXs98tVxh0Ys0RzSqd5K1DR6g==",
       "requires": {
         "@babel/runtime": "^7.5.2",
         "@babel/runtime-corejs3": "^7.5.3",
@@ -5655,7 +5655,7 @@
         "chartist": "^0.10.1",
         "classnames": "^2.2.6",
         "core-js": "^3.1.4",
-        "docsify-cli": "^4.3.0",
+        "docsify-cli": "^4.4.0",
         "dotenv-flow": "^2.0.0",
         "eva-icons": "^1.1.1",
         "lodash": "^4.17.14",
@@ -13642,12 +13642,11 @@
       }
     },
     "registry-auth-token": {
-      "version": "4.1.0",
-      "resolved": "https://registry.npmjs.org/registry-auth-token/-/registry-auth-token-4.1.0.tgz",
-      "integrity": "sha512-7uxS951DeOBOwsv8deX+l7HcjY2VZxaOgHtM6RKzg3HhpE+bJ0O7VbuMJLosC1T5WSFpHm0DuFIbqUl43jHpsA==",
+      "version": "4.1.1",
+      "resolved": "https://registry.npmjs.org/registry-auth-token/-/registry-auth-token-4.1.1.tgz",
+      "integrity": "sha512-9bKS7nTl9+/A1s7tnPeGrUpRcVY+LUh7bfFgzpndALdPfXQBfQV77rQVtqgUV3ti4vc/Ik81Ex8UJDWDQ12zQA==",
       "requires": {
-        "rc": "^1.2.8",
-        "safe-buffer": "^5.0.1"
+        "rc": "^1.2.8"
       }
     },
     "registry-url": {

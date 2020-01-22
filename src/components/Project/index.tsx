@@ -1,6 +1,6 @@
 import React, { FC, useState } from 'react';
 import classnames from 'classnames';
-import { Box, CenterLayout, Title } from 'dots';
+import { Box, CenterLayout, Title } from 'dots.js';
 
 import { Props as DetailsProps } from './Details';
 import Details from './Details/Loadable';

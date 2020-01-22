@@ -1,5 +1,5 @@
 import React, { FC } from 'react';
-import { Hero, StackItem, StackLayout, Title, Text, TextButton } from 'dots';
+import { Hero, StackItem, StackLayout, Title, Text, TextButton } from 'dots.js';
 
 import { scrollTo } from 'utils';
 

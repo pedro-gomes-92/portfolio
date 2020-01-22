@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" preserveAspectRatio="xMinYMax" width="auto" height="auto" viewBox="0 0 160 160">
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" preserveAspectRatio="xMinYMax" viewBox="0 0 160 160">
   <defs>
     <filter id="PG" x="32" y="46" width="96" height="69" filterUnits="userSpaceOnUse">
       <feOffset input="SourceAlpha"/>
