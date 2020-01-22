@@ -1,39 +1,35 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "744e92556d6864bb641d1f0eee84886c",
+    "revision": "f21a68ba3825681e0885930db1e4e190",
     "url": "/portfolio/index.html"
   },
   {
-    "revision": "9ccbb64ae85fe8c8cf81",
-    "url": "/portfolio/static/css/main.e991395c.chunk.css"
+    "revision": "b37402b306d862eed4ad",
+    "url": "/portfolio/static/css/main.c96fa147.chunk.css"
   },
   {
-    "revision": "fb6395b9fd661c279a70",
-    "url": "/portfolio/static/js/2.0a17b461.chunk.js"
+    "revision": "7be29f3b27508512a13e",
+    "url": "/portfolio/static/js/2.f1109c3d.chunk.js"
   },
   {
-    "revision": "16fd4817890261557c08775f12be9052",
-    "url": "/portfolio/static/js/2.0a17b461.chunk.js.LICENSE"
+    "revision": "b8f31b4c08c816c1796aa899cbec670c",
+    "url": "/portfolio/static/js/2.f1109c3d.chunk.js.LICENSE"
   },
   {
-    "revision": "2f96173f877219ef1b2d",
-    "url": "/portfolio/static/js/3.1e7e990b.chunk.js"
+    "revision": "85c5d377ed9a122d43aa",
+    "url": "/portfolio/static/js/3.537f353c.chunk.js"
   },
   {
-    "revision": "dcfb0a635f52232877ba",
-    "url": "/portfolio/static/js/4.a420fb8f.chunk.js"
+    "revision": "d9f573a88cea42c6f498",
+    "url": "/portfolio/static/js/4.7d9bc6e5.chunk.js"
   },
   {
-    "revision": "9ccbb64ae85fe8c8cf81",
-    "url": "/portfolio/static/js/main.c22d672c.chunk.js"
+    "revision": "b37402b306d862eed4ad",
+    "url": "/portfolio/static/js/main.4f3de291.chunk.js"
   },
   {
-    "revision": "fd8a7ea0dfd67a5c2866c7c0aa481135",
-    "url": "/portfolio/static/js/main.c22d672c.chunk.js.LICENSE"
-  },
-  {
-    "revision": "92784c43782a4a8f7c8a",
-    "url": "/portfolio/static/js/runtime-main.2f325b8a.js"
+    "revision": "70ac0c4f862abad1b2b0",
+    "url": "/portfolio/static/js/runtime-main.14f05c1c.js"
   },
   {
     "revision": "5073ed91b5c38de06d682cdee7c8adcd",
@@ -116,8 +112,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/portfolio/static/media/loader.cf30876c.svg"
   },
   {
-    "revision": "f7cdf148aab94a809289c213a1705d75",
-    "url": "/portfolio/static/media/logo.f7cdf148.svg"
+    "revision": "a90894931eae5ac84e3ebd1204f5f4c8",
+    "url": "/portfolio/static/media/logo.a9089493.svg"
   },
   {
     "revision": "5c3bc101d67898c4a37093f8550bad4e",
