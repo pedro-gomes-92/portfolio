@@ -5641,9 +5641,9 @@
       }
     },
     "dots.js": {
-      "version": "0.0.3",
-      "resolved": "https://registry.npmjs.org/dots.js/-/dots.js-0.0.3.tgz",
-      "integrity": "sha512-IUMByr9wxVT/3J3ZtgxIc+bi+dzBQb8cJ05rbB6zTiE7bt0hjC28vDMN1c/4/UXs98tVxh0Ys0RzSqd5K1DR6g==",
+      "version": "0.0.4",
+      "resolved": "https://registry.npmjs.org/dots.js/-/dots.js-0.0.4.tgz",
+      "integrity": "sha512-wOzWSiU4BuxH+GDLjumt1ISsESvFCtsf0ghyL07YAP1DJ/JQ2EVqIjv2MYe7zJDbamGD1GOIE3u11IM64Dg+IA==",
       "requires": {
         "@babel/runtime": "^7.5.2",
         "@babel/runtime-corejs3": "^7.5.3",

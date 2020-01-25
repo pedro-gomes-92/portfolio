@@ -40,7 +40,4 @@ $gap-elements: 16px;
 $navbar-container-height: 4.25rem;
 $footer-color-background: transparent;
 
-// Import
-@import '~dots.js/src/material/utilities/_all';
-
 $color-background-inverted-soft: color-intensity($color-background-inverted, lighten, 15);
