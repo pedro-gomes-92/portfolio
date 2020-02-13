@@ -17,7 +17,7 @@ const Section: FC<Props> = ({ reference }) => {
           <Image source={profile} />
         </ColumnItem>
         <ColumnItem>
-          <Title text="Hi" color="primary" />
+          <Title text="Hi" color="primary" size={3} />
           <Text text="My name is Pedro Gomes, born and raised in Almada, Portugal. " />
           <br />
           <Text text="My work consists in developing and maintaining " />

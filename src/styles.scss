@@ -8,8 +8,15 @@ html {
 
 .title,
 .link .text {
-  text-transform: uppercase;
   letter-spacing: 0.12rem;
+}
+
+.link .text {
+  text-transform: uppercase;
+}
+
+.title {
+  text-transform: capitalize;
 }
 
 .button,

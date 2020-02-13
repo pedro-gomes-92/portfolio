@@ -1,8 +1,10 @@
 import React, { FC } from 'react';
-import { ColumnLayout, ColumnItem, BarChart } from 'dots.js';
+import { StackItem, StackLayout } from 'dots.js';
 
 import PortSection, { Props as SectionProps } from 'components/Section';
-import { NAME } from './constants';
+import Skill from 'components/Skill';
+
+import { NAME, LANGUAGES, LIBRARIES, TOOLS } from './constants';
 
 interface Props {
   reference: SectionProps['reference'];
@@ -10,12 +12,17 @@ interface Props {
 
 const Section: FC<Props> = ({ reference }) => (
   <PortSection name={NAME} reference={reference}>
-    <ColumnLayout gap={4}>
-      <ColumnItem size={4}>
-        <BarChart labels={['Front End']} values={[10]} />
-      </ColumnItem>
-      <ColumnItem size={4}></ColumnItem>
-    </ColumnLayout>
+    <StackLayout gap={4}>
+      <StackItem>
+        <Skill title="Languages" skillSet={LANGUAGES} />
+      </StackItem>
+      <StackItem>
+        <Skill title="Libraries" skillSet={LIBRARIES} />
+      </StackItem>
+      <StackItem>
+        <Skill title="Tools" skillSet={TOOLS} />
+      </StackItem>
+    </StackLayout>
   </PortSection>
 );
 
