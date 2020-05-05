@@ -2,15 +2,15 @@ import React, { FC } from 'react';
 import { ColumnLayout, ColumnItem } from 'dots.js';
 
 import Project from 'components/Project';
-import PortSection, { Props as SectionProps } from 'components/Section';
+import Section, { Props as SectionProps } from 'components/Section';
 import { NAME } from './constants';
 
 interface Props {
   reference: SectionProps['reference'];
 }
 
-const Section: FC<Props> = ({ reference }) => (
-  <PortSection name={NAME} reference={reference}>
+const Page: FC<Props> = ({ reference }) => (
+  <Section name={NAME} reference={reference}>
     <ColumnLayout isWrapping gap={4}>
       <ColumnItem size={4}>
         <Project
@@ -50,7 +50,7 @@ const Section: FC<Props> = ({ reference }) => (
         />
       </ColumnItem>
     </ColumnLayout>
-  </PortSection>
+  </Section>
 );
 
-export default Section;
+export default Page;

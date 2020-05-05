@@ -2,42 +2,30 @@
 $path-dots-fonts: '~dots.js/dist/fonts';
 
 // Colors
-$color-theme: 'dark';
+$color-theme: 'light';
 
-$color-background: #272727;
-$color-background-inverted: #ffffff;
-$color-primary: #ff652f;
-$color-primary-inverted: $color-background-inverted;
+$color-background: #f3f3f3;
+$color-background-inverted: #424345;
+$color-primary: #1d8ac2;
+$color-primary-inverted: $color-background;
 
 // Typography
-$text-primary-path: './assets/KaushanScript-Regular';
-@font-face {
-  font-family: 'Kaushan Script';
-  src: url('#{$text-primary-path}.eot');
-  src: url('#{$text-primary-path}.eot?#iefix') format('embedded-opentype'),
-    url('#{$text-primary-path}.woff2') format('woff2'), url('#{$text-primary-path}.woff') format('woff'),
-    url('#{$text-primary-path}.ttf') format('truetype'),
-    url('#{$text-primary-path}.svg#KaushanScript-Regular') format('svg');
-}
+$text-path: './assets/SukhumvitSet-Text';
 
-$text-primary-family: 'Kaushan Script', 'Helvetica', 'Arial', sans-serif;
-
-$text-path: './assets/Strait-Regular';
 @font-face {
-  font-family: 'Strait';
+  font-family: 'SukhumvitSet';
   src: url('#{$text-path}.eot');
   src: url('#{$text-path}.eot?#iefix') format('embedded-opentype'), url('#{$text-path}.woff2') format('woff2'),
     url('#{$text-path}.woff') format('woff'), url('#{$text-path}.ttf') format('truetype'),
-    url('#{$text-path}.svg#Strait-Regular') format('svg');
+    url('#{$text-path}.svg#SukhumvitSet-Text') format('svg');
 }
 
-$text-family: 'Strait', 'Helvetica', 'Arial', sans-serif;
+$text-primary-family: 'SukhumvitSet', 'Helvetica', 'Arial', sans-serif;
+$text-family: 'SukhumvitSet', 'Helvetica', 'Arial', sans-serif;
 
 // Gap
 $gap-elements: 16px;
 
 // Components
-$navbar-container-height: 4.25rem;
-$footer-color-background: transparent;
 
 $color-background-inverted-soft: color-intensity($color-background-inverted, lighten, 15);

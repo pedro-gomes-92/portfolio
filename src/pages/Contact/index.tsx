@@ -1,15 +1,15 @@
 import React, { FC } from 'react';
 import { ColumnLayout, ColumnItem, StackLayout, StackItem, Text, Link, Icon, Title } from 'dots.js';
 
-import PortSection, { Props as SectionProps } from 'components/Section';
+import Section, { Props as SectionProps } from 'components/Section';
 import { NAME } from './constants';
 
 interface Props {
   reference: SectionProps['reference'];
 }
 
-const Component: FC<Props> = ({ reference }) => (
-  <PortSection name={NAME} reference={reference}>
+const Page: FC<Props> = ({ reference }) => (
+  <Section name={NAME} reference={reference}>
     <ColumnLayout gap={4}>
       <ColumnItem>
         <StackLayout gap={2}>
@@ -66,7 +66,7 @@ const Component: FC<Props> = ({ reference }) => (
         </StackLayout>
       </ColumnItem>
     </ColumnLayout>
-  </PortSection>
+  </Section>
 );
 
-export default Component;
+export default Page;

@@ -1,7 +1,7 @@
 import React, { FC } from 'react';
 import { ColumnLayout, ColumnItem, Image, Title, Text } from 'dots.js';
 
-import PortSection, { Props as SectionProps } from 'components/Section';
+import Section, { Props as SectionProps } from 'components/Section';
 import profile from './assets/profile.jpeg';
 import { NAME } from './constants';
 
@@ -9,9 +9,9 @@ interface Props {
   reference: SectionProps['reference'];
 }
 
-const Section: FC<Props> = ({ reference }) => {
+const Page: FC<Props> = ({ reference }) => {
   return (
-    <PortSection name={NAME} reference={reference}>
+    <Section name={NAME} reference={reference}>
       <ColumnLayout gap={2}>
         <ColumnItem>
           <Image source={profile} />
@@ -43,8 +43,8 @@ const Section: FC<Props> = ({ reference }) => {
           <Text text=" to make the next big step in my career." />
         </ColumnItem>
       </ColumnLayout>
-    </PortSection>
+    </Section>
   );
 };
 
-export default Section;
+export default Page;
