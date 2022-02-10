@@ -13,7 +13,7 @@
     "@types/react-dom": "^16.9.4",
     "@types/react-loadable": "^5.5.3",
     "gh-pages": "^2.2.0",
-    "node-sass": "^4.13.1",
+    "node-sass": "^7.0.0",
     "react-scripts": "3.3.0",
     "typescript": "^3.7.4"
   },
